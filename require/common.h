@@ -1,5 +1,5 @@
 #ifndef COMMON_dsfx3d
-#defineCOMMON_dsfx3d
+#define COMMON_dsfx3d
 
 #include <iostream>
 #include <conio.h>
