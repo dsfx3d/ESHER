@@ -4,28 +4,28 @@
 #include "esher_def.h"
 
 /**/
-SecretKey Esher::parseKey(EshKey key) {
-	SecretKey _k=0;
+CypherText Esher::esh(PlainText text, EshKey key) {
+	bool swapFlag=false;
+	int _ks= key.length();
 	
-	Digit k;
-	int d=1000,r=10;
-	
-	loop(4) {
-		k = (key/d);
-		if(i>0) k%=10;
-		//cout << "i: "<<i<<" k: "<<k<<endl;
-		if(k<5)k=10-k;
-		//cout << "i: "<<i<<" k: "<<k<<endl;
-		_k+=k*d;
-		//cout << "i: "<<i<<" _k: "<<_k<<endl;
-		d/=10;
+	loop(text.length()) {
+		if(_ks<0) _ks = key.length();
+		text[i]+=getInt(key[--_ks]);
 	}
-	return _k;
+	return text;
 }
 /**/
-CyChar Esher::_esh(char c, EshKey key) {
-	SecretKey _key = parseKey(key);
+PlainText Esher::hse(CypherText text, EshKey key) {
+	bool swapFlag=false;
+	int _ks= key.length();
 	
-}/**/
+	loop(text.length()) {
+		if(_ks<0) _ks = key.length();
+		
+		text[i]-=getInt(key[--_ks]);
+	}
+	return text;
+}
+/**/
 
 #endif

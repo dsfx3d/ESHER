@@ -1,25 +1,21 @@
 #include "require/common.h"
+#include "require/eli.h"
 #include "require/esher.h"
+#include "require/esh.h"
 
 int main(int argc, char* args[]) {
 	
-	Esher esher;
-	cout << esher.foo(1327);
-	
-	exit(0);
-	
 	if(argc==1) { //ESH
-		cout <<"\n\n ESH! \n\n";
+		SAY_ESH;
 	} else {
 		switch((args[1])[1]) {
 			case 'h' : break;
-			case 'e' : break;
+			case 'e' : enc(argc,args);break;
 			case 'l' : break;
-			case 'd' : break;
-			
-			default : cout << endl << args[1] << " : invalid option.\nHelp \"esh -h\" "".\n";
-		}
+			case 'd' : cne(argc,args);break;
 		
+			default : INVALID_OPT_ERR;
+		}
 	}
 	
 	return 1;
