@@ -5,25 +5,22 @@
 
 /**/
 CypherText Esher::esh(PlainText text, EshKey key) {
-	bool swapFlag=false;
-	int _ks= key.length();
-	
+	int _ks=key.length();
 	loop(text.length()) {
-		if(_ks<0) _ks = key.length();
+		if(_ks<0)_ks=key.length();
 		text[i]+=getInt(key[--_ks]);
 	}
+	
 	return text;
 }
 /**/
-PlainText Esher::hse(CypherText text, EshKey key) {
-	bool swapFlag=false;
-	int _ks= key.length();
-	
+PlainText Esher::hse(CypherText text, EshKey key) {	
+	int _ks=key.length();
 	loop(text.length()) {
-		if(_ks<0) _ks = key.length();
-		
+		if(_ks<0)_ks=key.length();
 		text[i]-=getInt(key[--_ks]);
 	}
+	
 	return text;
 }
 /**/

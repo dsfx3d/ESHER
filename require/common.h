@@ -6,10 +6,10 @@
 #include <conio.h>
 #include <stdlib.h>
 #include <stdio.h>
-#include <vector>
-#include <string.h>
+#include <string>
 #include <fstream>
 #include <streambuf>
+#include <time.h>
 using namespace std;
 
 #define loop(m) for(int i=0; i<m; i++)
@@ -25,8 +25,6 @@ using namespace std;
 */
 int getInt(char c) {
 	int i = c - '0';
-	
-	if(i>10) return i/10;
 	if(i<0) return (i*i)/10;
 	return i;
 }

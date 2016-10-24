@@ -4,7 +4,6 @@
 #include "require/esh.h"
 
 int main(int argc, char* args[]) {
-	
 	if(argc==1) { //ESH
 		SAY_ESH;
 	} else {
@@ -15,6 +14,7 @@ int main(int argc, char* args[]) {
 			case 'd' : cne(argc,args);break;
 		
 			default : INVALID_OPT_ERR;
+			
 		}
 	}
 	
