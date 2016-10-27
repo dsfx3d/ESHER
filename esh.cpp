@@ -13,10 +13,8 @@ int main(int argc, char* args[]) {
 			case 'l' : break;
 			case 'd' : cne(argc,args);break;
 		
-			default : INVALID_OPT_ERR;
-			
+			default : INVALID_OPT_ERR;		
 		}
 	}
-	
 	return 1;
 }

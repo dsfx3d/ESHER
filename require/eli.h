@@ -3,7 +3,7 @@
 
 #include "eli_def.h"
 
-#define CHK_FILE_ACCESS(m) std::fstream file(&(path[0]));if(!file.is_open()){FILE_ACCESS_ERR;return m;}
+#define CHK_FILE_ACCESS(m)if(!file.is_open()){FILE_ACCESS_ERR;return m;}
 
 /*
 note: open file to read entire content
@@ -13,6 +13,9 @@ ReadMode : true - reading doped file
 std::string ELI::readFile(FilePath path, Offset offset) {
 	int beg=0;
 	Data data;
+	
+	ifstream file(&(path[0]));
+
 	CHK_FILE_ACCESS(data);
 	
 	file.seekg(0, ios::end);   
