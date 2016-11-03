@@ -1,12 +1,18 @@
 # ESHER
 
+> “Cryptography is the ultimate form of non-violent direct action.” 
+> ― Julian Assange
+
 ### About
 Esher is a command line utility for file encryption.
 
+### Syntax
+    esh -f[h|e|d|l] arg1 --optional -f[o] arg2 key
+#####   Options
+    |   Flag   |   Option   |   Discription   |
+    -------------------------------------------
+    
+
 ### Description
 .....
-
-### Syntax
-    esh -flag[h|e|d|l] args1 --optional[-flag2[o] args2] key
-
-### 
+ 
