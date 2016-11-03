@@ -3,10 +3,11 @@
 > “Cryptography is the ultimate form of non-violent direct action.” 
 > ― Julian Assange
 
-![ESH](/esh.jpg)
-
-## About
 Esher is a command line utility for file encryption.
+
+![ESH](/esh.jpg).
+
+## Usage
 
 ##### Syntax
     esh -f[h|e|d|dh|do|p|l] arg1 --optional[ -p[o] arg2 ] [key] 
