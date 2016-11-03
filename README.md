@@ -15,10 +15,11 @@ Esher is a command line utility for file encryption.
     |---    ---|---                 ---|---                                     ---|
     |          |  -e [filepath] [key]  | 1. Read file at 'filepath'.               |
     |          |                       | 2. Encrypt data using 'key'.              |
-    |          |                       | 3. Write ciphertext in file.              |
+    |          |                       | 3. Write ciphertext in file               |
+    |          |                       |    to convert into 'dopefile'.            |
     |---    ---|---                 ---|---                                     ---|
-    |          |  -d [filepath]        | Decrypts the encrypted file at 'filepath' |
-    |          |                       | and prints the decyphered data            |
+    |          |  -d [filepath]        | Decrypts the dope file at 'filepath'      |
+    |          |                       | and prints the plain data                 |
     |---    ---|---                 ---|---                                     ---|
     
 ### Description
