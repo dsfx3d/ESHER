@@ -28,3 +28,12 @@ Esher is a command line utility for file encryption.
 ### Description
 .....
  
+## Project Structure
+* __esh.cpp__ - Main source file.
+* __/require__ - Required headers directory.
+  * __common.h__ - All common `includes` and `defines`.
+  * __eli.h__ - File handler for the project.
+  * __eli_def.h__ - Definition of _eli.h_.
+  * __esh.h__ - Interface functions between _esh.cpp_ and required headers.
+  * __esher.h__ - _le_ Cryptographer.
+  * __esher_def.h__ - Definition of _esher.h_.
