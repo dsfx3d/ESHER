@@ -18,6 +18,8 @@ void enc(int argc,char* args[]) {
 	CypherText ct ="dope_";
 	PlainText pt = eli.readFile(PARAM_PATH,0);
 	
+	pt += PARAM_KEY;
+	
 	CHECK_IF_DOPE_FILE(pt, "Already Encrypted.\nRun as Administrator.\n");
 	
 	ct += esher.esh(pt,PARAM_KEY);

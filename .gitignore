@@ -1,4 +1,6 @@
 # custom 
+*.txt
+*.dope
 
 # Compiled Object files
 *.slo
