@@ -2,9 +2,9 @@
 > “Cryptography is the ultimate form of non-violent direct action.” 
 > ― Julian Assange
 
-[Usage](https://github.com/dsfx3d/ESHER#usage) | [Description](https://github.com/dsfx3d/ESHER#description) | [Project Structure](https://github.com/dsfx3d/ESHER#project-structure)
-
 ![ESH](/esh.jpg)
+
+[Usage](https://github.com/dsfx3d/ESHER#usage) | [Description](https://github.com/dsfx3d/ESHER#description) | [Project Structure](https://github.com/dsfx3d/ESHER#project-structure)
 
 ## Usage
 Esher is a command line utility for file encryption.
