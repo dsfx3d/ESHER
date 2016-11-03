@@ -7,19 +7,19 @@
 Esher is a command line utility for file encryption.
 
 ##### Syntax
-    esh -f[h|e|d|l] arg1 --optional[ -p[o] arg2 ] [key]
-#####   Options
-    |   Flag   |   Option              | Discription                               |
+    esh -f[h|e|d|dh|do|l] arg1 --optional[ -p[o] arg2 ] [key]
+##### Options
+    |   Flag   |   Options             | Discription                               |
     -------------------------------------------------------------------------------|
     |   -f     |  -h                   | Displays the utility manual page          |
     |---    ---|---                 ---|---                                     ---|
-    |          |  -e [filepath] [key]  | 1. Read file at 'filepath'.               |
+    |          |  -e [filepath] [key]  | 1. Read data at 'filepath'.               |
     |          |                       | 2. Encrypt data using 'key'.              |
-    |          |                       | 3. Write ciphertext in file               |
-    |          |                       |    to convert into 'dopefile'.            |
+    |          |                       | 3. Convert plainfile to dopefile.         |                             
     |---    ---|---                 ---|---                                     ---|
-    |          |  -d [filepath]        | Decrypts the dope file at 'filepath'      |
-    |          |                       | and prints the plain data                 |
+    |          |  -d [filepath] [key]  | 1. Read data at 'filepath'.               |
+    |          |                       | 2. Decrypt data using 'key'.              |
+    |          |                       | 3. Display Decrypted Data.                |
     |---    ---|---                 ---|---                                     ---|
     
 ### Description
