@@ -7,7 +7,7 @@
 Esher is a command line utility for file encryption.
 
 ##### Syntax
-    esh -f[h|e|d|dh|do|l] arg1 --optional[ -p[o] arg2 ] [key]
+    esh -f[h|e|d|dh|do|r|l] arg1 --optional[ -p[o] arg2 ] [key]
 ##### Options
     |   Flag   |   Options             | Discription                               |
     -------------------------------------------------------------------------------|
