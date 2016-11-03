@@ -8,21 +8,30 @@
 typedef string FilePath;
 typedef string Data;
 typedef int LineNumber;
-typedef int Offset;
+typedef int StartOffset;
+typedef int EndOffset;
+typedef int MinimumCharOccurance;
 
 class ELI {
 	public:
 		/*
-		Read File by filepath
+		Read Entire File from filepath
 		PARAM: path to file
 		PRE  : path must be valid
 		POST : reads the file and returns content in string*/
-		std::string readFile(FilePath,Offset);
+		std::string readFile(FilePath,StartOffset);
+		std::string readFile(FilePath,StartOffset,EndOffset);
 		/*
-		Write File on path; creates new file if file doesn't exist
+		Write File at provided path; creates new file if file doesn't exist
 		PARAM: data, path to file
 		PRE  : must be a valid system path
 		POST : write param1 in the file created*/
 		void writeFile(FilePath, Data);
+		/*
+		return location of char after n occurances
+		PARAM: filepath, query_char, minimum occurance
+		PRE  : path must be valid
+		POST : returns the index of recently occured char*/
+		int _searchc(FilePath, char, MinimumCharOccurance);
 };
 #endif
