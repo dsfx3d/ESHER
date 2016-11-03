@@ -3,6 +3,8 @@
 > “Cryptography is the ultimate form of non-violent direct action.” 
 > ― Julian Assange
 
+![ESH](/esh.jpg)
+
 ## About
 Esher is a command line utility for file encryption.
 
