@@ -1,12 +1,8 @@
 #ifndef ESHER_DEF_dsfx3d
 #define ESHER_DEF_dsfx3d
- 
+
+#include "typedef.h" 
 #include "common.h"
- 
-typedef std::string EshKey; // 4 digit integeral key 
-typedef char CyChar;		// cyphered char
-typedef string PlainText;	//PlainText
-typedef string CypherText;	//CypherText
  
 class Esher {
  	public:

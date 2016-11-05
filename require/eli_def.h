@@ -1,16 +1,12 @@
 #ifndef ELI_def_dsfx3d
 #define ELI_def_dsfx3d
 
+#include "typedef.h"
 #include "common.h"
 
 #define FILE_ACCESS_ERR cout<<"\nUnable to open file.\nCheck if file exists and is accessible.\nTry running as Administrator.\nHelp \"esh -h\".\n\n Esh!\n"
 
-typedef string FilePath;
-typedef string Data;
-typedef int LineNumber;
-typedef int StartOffset;
-typedef int EndOffset;
-typedef int MinimumCharOccurance;
+
 
 class ELI {
 	public:
