@@ -13,26 +13,31 @@ Esher is a command line utility for file encryption.
     esh -f[h|e|d|dh|do|p|l] arg1 --optional[ -p[o] arg2 ] [key] 
   
 ##### Options
-    |   Flag   |   Options                   | Discription                                 |
-    ---------------------------------------------------------------------------------------|
-    |   -f     |  -h --help                  | Displays the utility manual page            |
-    |---    ---|---                       ---|---                                       ---|
-    |          |  -e [filepath] [key]        | 1. Read data at 'filepath'.                 |
-    |          |                             | 2. Encrypt data using 'key'.                |
-    |          |                             | 3. Convert plainfile to dopefile.           |
-    |---    ---|---                       ---|---                                       ---|
-    |          |  -d [filepath] [key]        | 1. Read data at 'filepath'.                 |
-    |          |                             | 2. Decrypt data using 'key'.                |
-    |          |                             | 3. Display Decrypted Data.                  |
-    |---    ---|---                       ---|---                                       ---|
-    |          |  -d [filepath] [key] \      | 1. Read data at 'filepath'.                 |
-    |          |     -o [outputpath]         | 2. Decrypt data using 'key'.                |
-    |          |                             | 3. Display Decrypted Data.                  |
-    |          |                             | 4. Store decyphered data at `outputpath`    |
-    |---    ---|---                       ---|---                                       ---|
-    |          |  -dh [filepath] [key] \     | 1. Read data at 'filepath'.                 |
-    |          |     -o [outputpath]         | 2. Decrypt data using 'key'.                |
-    |          |                             | 3. Store decyphered data at `outputpath`    |
+    |   Flag   |   Options                   | Discription                                   |
+    -----------------------------------------------------------------------------------------|
+    |   -f     |  -h --help                  | Displays the utility manual page              |
+    |---    ---|---                       ---|---                                         ---|
+    |          |  -e [filepath] [key]        | 1. Read data at 'filepath'.                   |
+    |          |                             | 2. Encrypt data using 'key'.                  |
+    |          |                             | 3. Convert plainfile to dopefile.             |
+    |---    ---|---                       ---|---                                         ---|
+    |          |  -d [filepath] [key]        | 1. Read data at 'filepath'.                   |
+    |          |                             | 2. Decrypt data using 'key'.                  |
+    |          |                             | 3. Display Decrypted Data.                    |
+    |---    ---|---                       ---|---                                         ---|
+    |          |  -d [filepath] [key] \      | 1. Read data at 'filepath'.                   |
+    |          |     -o [outputpath]         | 2. Decrypt data using 'key'.                  |
+    |          |                             | 3. Display Decrypted Data.                    |
+    |          |                             | 4. Store decyphered data at `outputpath`      |
+    |---    ---|---                       ---|---                                         ---|
+    |          |  -dh [filepath] [key] \     | 1. Read data at 'filepath'.                   |
+    |          |     -o [outputpath]         | 2. Decrypt data using 'key'.                  |
+    |          |                             | 3. Store decyphered data at `outputpath`      |
+    |---    ---|---                       ---|---                                         ---|
+    |          |  -do [filepath] [key]       | 1. Read data at 'filepath'.                   |
+    |          |                             | 2. Decrypt data using 'key'.                  |
+    |          |                             | 3. Overwrites the original file at 'filepath' |
+    |          |                             |    decrypted data.                          |
     |---    ---|---                       ---|---                                       ---|
     |   -p     |  -o [filepath] --outputfile | To be used with `-d` flag. Read Description |
                        
