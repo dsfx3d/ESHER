@@ -4,7 +4,7 @@
 
 ![ESH](/esh.jpg)
 
-[Usage](https://github.com/dsfx3d/ESHER#usage) | [Description](https://github.com/dsfx3d/ESHER#description) | [Project Structure](https://github.com/dsfx3d/ESHER#project-structure)
+__[Usage](https://github.com/dsfx3d/ESHER#usage) | [Description](https://github.com/dsfx3d/ESHER#description) | [Project Structure](https://github.com/dsfx3d/ESHER#project-structure)__
 
 ## Usage
 Esher is a command line utility for file encryption.
