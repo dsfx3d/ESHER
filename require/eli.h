@@ -11,16 +11,15 @@ note: open file to read entire content
 ReadMode : true - reading doped file
 		   false- reading plain file */
 std::string ELI::readFile(FilePath path, StartOffset offset) {
-	int beg=0;
 	Data data;
 	
 	ifstream file(&(path[0]));
 
 	CHK_FILE_ACCESS(data);
 	
-	file.seekg(0, ios::end);   
+	file.seekg(offset,ios::end);  
 	data.reserve(file.tellg());
-	file.seekg(beg+offset, ios::beg);
+	file.seekg(offset);
 
 	data.assign((std::istreambuf_iterator<char>(file)), std::istreambuf_iterator<char>());
 	file.close();
