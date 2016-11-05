@@ -25,6 +25,15 @@ Esher is a command line utility for file encryption.
     |          |                             | 2. Decrypt data using 'key'.                |
     |          |                             | 3. Display Decrypted Data.                  |
     |---    ---|---                       ---|---                                       ---|
+    |          |  -d [filepath] [key] \      | 1. Read data at 'filepath'.                 |
+    |          |     -o [outputpath]         | 2. Decrypt data using 'key'.                |
+    |          |                             | 3. Display Decrypted Data.                  |
+    |          |                             | 4. Store decyphered data at `outputpath`    |
+    |---    ---|---                       ---|---                                       ---|
+    |          |  -dh [filepath] [key] \     | 1. Read data at 'filepath'.                 |
+    |          |     -o [outputpath]         | 2. Decrypt data using 'key'.                |
+    |          |                             | 3. Store decyphered data at `outputpath`    |
+    |---    ---|---                       ---|---                                       ---|
     |   -p     |  -o [filepath] --outputfile | To be used with `-d` flag. Read Description |
                        
     
