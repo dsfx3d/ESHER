@@ -1,4 +1,5 @@
 #include "require/common.h"
+#include "require/typedef.h"
 #include "require/eli.h"
 #include "require/esher.h"
 #include "require/esh.h"

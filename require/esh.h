@@ -2,10 +2,12 @@
 #define PARAM_OPT (string)args[1]
 #define PARAM_NEW_PATH (string)args[4]
 #define PARAM_KEY (string)args[3]
+#define PARAM_OLD_KEY (string)args[4]
 
 #define SAY_ESH cout<<"\n\n ESH!\n\n";
 
 #define PRE_CIPHERED_ERR "Already Encrypted.\nRun as Administrator.\n"
+#define INVALID_ARGS_ERR cout<<endl<<"Error: Invalid Arguments.\nEnter Valid Arguments.\n\nType 'esh -h --help'.\n"
 #define INVALID_OPT_ERR cout<<endl<<args[1]<<" : invalid option.\nHelp \"esh -h\" .\n"
 #define INVALID_KEY_ERR cout<<endl<<"Error: invalid key.\nEnter a secure key (minimum 6 character).\n\nExample:\n\n esh -e \"filename.ext\" \"securekey\"\n"
 #define FILE_NOT_DOPED_ERR cout<<endl<<"\nError: The file passed is not doped.\n\nCheck if the file was Encrypted using some other utility.\nCan only process doped files.\n"
@@ -14,6 +16,19 @@
 #define IS_DOPE_FILE() if(!sub.compare("dope_"))
 #define CHECK_IF_DOPE_FILE(pt,m) string sub=pt.substr(0,5);IS_DOPE_FILE(){cout<<m;return;}
 
+/**/
+void unlock(FilePath path, EshKey key) {
+	ELI eli;
+	StartOffset so;
+	EndOffset eo;
+	Data file_data;
+	
+	eo = eli.length(path);
+	so = eo - key.length();
+	file_data = eli.readThis(path,so,eo,NORMAL);
+	cout<<file_data<<endl;
+	if(file_data!=key) exit(-1);
+}
 /**/
 void enc(int argc,char* args[]) {
 	//????????????
@@ -27,7 +42,15 @@ void enc(int argc,char* args[]) {
 	
 	pt += PARAM_KEY;
 	
-	CHECK_IF_DOPE_FILE(pt, PRE_CIPHERED_ERR);
+	//CHECK_IF_DOPE_FILE(pt, PRE_CIPHERED_ERR);
+	string sub;
+	IS_DOPE_FILE(){
+		if(argc<5) {
+			INVALID_ARGS_ERR;
+			return;
+		}
+		unlock(PARAM_PATH,PARAM_OLD_KEY);
+	}
 	
 	ct += esher.esh(pt,PARAM_KEY);
 	eli.writeFile(PARAM_PATH, ct);
