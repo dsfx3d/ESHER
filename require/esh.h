@@ -39,8 +39,7 @@ void enc(int argc,char* args[]) {
 	ELI eli;
 	CypherText ct ="dope_";
 	PlainText pt = eli.readFile(PARAM_PATH,0);
-	
-	pt += PARAM_KEY;
+	cout<<"\nsafda: "<<pt.length();
 	
 	//CHECK_IF_DOPE_FILE(pt, PRE_CIPHERED_ERR);
 	string sub;
@@ -79,7 +78,7 @@ void cne(int argc,char* args[]) {
 		return;
 	}
 	
-	pt = esher.hse(cipher.substr(5,cipher.length()-_eshkey.length()-5), _eshkey);
+	pt = esher.hse(cipher.substr(5,cipher.length()-5), _eshkey);
 
 	if(((string)(args[3]))[1]=='o' && argc>4 ) { //if flag at argument 3
 		eli.writeFile(PARAM_NEW_PATH,pt);
