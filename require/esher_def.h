@@ -1,8 +1,13 @@
 #ifndef ESHER_DEF_dsfx3d
 #define ESHER_DEF_dsfx3d
- 
-#include "common.h"
 
+#include "typedef.h" 
+#include "common.h"
+<<<<<<< HEAD
+
+=======
+ 
+>>>>>>> 6d5426a1ba5ba418e70f6bf346f7237d0f6b91a3
 class Esher {
  	public:
  		//public function for strng encryption

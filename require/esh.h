@@ -94,3 +94,6 @@ void cne(int argc,char* args[]) {
 	}
 }
 /**/
+void login(int argc, char* args[]) {
+	
+}
