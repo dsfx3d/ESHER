@@ -32,17 +32,18 @@ void unlock(FilePath path, EshKey key) {
 /**/
 void enc(int argc,char* args[]) {
 	//????????????
-	VALIDATE_ARGS(PARAM_KEY);
+	//VALIDATE_ARGS(PARAM_KEY);
+	cout<<(PARAM_KEY).length();
+	if((PARAM_KEY).length()<6){INVALID_KEY_ERR;return;}
 	//????????????
 	
 	Esher esher;
 	ELI eli;
 	CypherText ct ="dope_";
 	PlainText pt = eli.readFile(PARAM_PATH,0);
-	cout<<"\nsafda: "<<pt.length();
 	
 	//CHECK_IF_DOPE_FILE(pt, PRE_CIPHERED_ERR);
-	string sub;
+	string sub=pt.substr(0,5);
 	IS_DOPE_FILE(){
 		if(argc<5) {
 			INVALID_ARGS_ERR;
@@ -64,7 +65,6 @@ void cne(int argc,char* args[]) {
 	VALIDATE_ARGS(_eshkey);
 	//????????????
 	
-	
 	Esher esher;
 	ELI eli;
 	PlainText pt;
@@ -78,7 +78,7 @@ void cne(int argc,char* args[]) {
 		return;
 	}
 	
-	pt = esher.hse(cipher.substr(5,cipher.length()-5), _eshkey);
+	pt = esher.hse(cipher.substr(sub.length(),cipher.length()-sub.length()), _eshkey);
 
 	if(((string)(args[3]))[1]=='o' && argc>4 ) { //if flag at argument 3
 		eli.writeFile(PARAM_NEW_PATH,pt);
